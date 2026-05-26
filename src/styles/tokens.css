@@ -1,0 +1,68 @@
+@layer base {
+/* === 设计令牌（Design Tokens） === */
+:root {
+  /* 色彩体系 */
+  --background: 38 30% 97%;
+  --foreground: 24 20% 18%;
+
+  --card: 36 40% 98%;
+  --card-foreground: 24 20% 18%;
+
+  --popover: 36 40% 98%;
+  --popover-foreground: 24 20% 18%;
+
+  /* 主色：暖棕橙 */
+  --primary: 24 60% 42%;
+  --primary-foreground: 36 40% 98%;
+
+  /* 次色：浅米黄 */
+  --secondary: 38 35% 92%;
+  --secondary-foreground: 24 30% 30%;
+
+  --muted: 38 25% 93%;
+  --muted-foreground: 24 15% 52%;
+
+  /* 强调色：暖橙金 */
+  --accent: 32 70% 88%;
+  --accent-foreground: 24 45% 28%;
+
+  --destructive: 0 72% 55%;
+  --destructive-foreground: 36 40% 98%;
+
+  --border: 34 25% 87%;
+  --input: 34 25% 87%;
+  --ring: 24 60% 42%;
+  --radius: 0.75rem;
+
+  /* 日记专属 */
+  --diary-warm: 32 55% 90%;
+  --diary-page: 40 60% 99%;
+  --diary-ink: 24 30% 22%;
+  --diary-mark: 24 70% 55%;
+  --diary-faint: 38 40% 95%;
+
+  /* 渐变 */
+  --gradient-hero: linear-gradient(160deg,
+    hsl(36 50% 96%) 0%,
+    hsl(32 45% 93%) 50%,
+    hsl(28 40% 90%) 100%);
+  --gradient-sidebar: linear-gradient(180deg,
+    hsl(36 45% 97%) 0%,
+    hsl(34 35% 95%) 100%);
+  --gradient-primary: linear-gradient(135deg,
+    hsl(24 60% 42%),
+    hsl(20 65% 36%));
+
+  /* 阴影 */
+  --shadow-card: 0 2px 12px -2px hsl(24 30% 20% / 0.08),
+                 0 1px 3px hsl(24 30% 20% / 0.05);
+  --shadow-dialog: 0 24px 80px -12px hsl(24 30% 15% / 0.25),
+                   0 8px 24px hsl(24 30% 15% / 0.1);
+  --shadow-hover: 0 8px 24px -4px hsl(24 30% 20% / 0.14),
+                  0 2px 6px hsl(24 30% 20% / 0.06);
+
+  /* 过渡 */
+  --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+}
