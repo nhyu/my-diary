@@ -1,0 +1,56 @@
+@layer components {
+/* === 日历组件样式 === */
+
+.cal-day {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: var(--transition-base);
+  color: hsl(var(--foreground));
+}
+
+.cal-day:hover:not(.cal-day--other):not(.cal-day--selected) {
+  background: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+.cal-day--today {
+  font-weight: 600;
+  color: hsl(var(--primary));
+}
+
+.cal-day--selected {
+  background: var(--gradient-primary);
+  color: hsl(var(--primary-foreground));
+  font-weight: 600;
+  box-shadow: 0 2px 8px hsl(var(--primary) / 0.35);
+}
+
+.cal-day--other {
+  color: hsl(var(--muted-foreground) / 0.45);
+  cursor: default;
+}
+
+.cal-day--has-diary::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  background: hsl(var(--diary-mark));
+  border-radius: 50%;
+  animation: dot-pop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cal-day--selected.cal-day--has-diary::after {
+  background: hsl(var(--primary-foreground) / 0.7);
+}
+}

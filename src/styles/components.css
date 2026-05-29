@@ -1,0 +1,137 @@
+@layer components {
+/* === 通用组件样式 === */
+
+/* 卡片 */
+.diary-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-base);
+}
+
+.diary-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-1px);
+}
+
+/* 主按钮 */
+.diary-btn-primary {
+  background: var(--gradient-primary);
+  color: hsl(var(--primary-foreground));
+  border-radius: var(--radius);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: var(--transition-base);
+  box-shadow: 0 2px 8px hsl(var(--primary) / 0.35);
+}
+
+.diary-btn-primary:hover {
+  opacity: 0.92;
+  box-shadow: 0 4px 14px hsl(var(--primary) / 0.45);
+  transform: translateY(-1px);
+}
+
+.diary-btn-primary:active {
+  transform: translateY(0);
+}
+
+/* 输入框 */
+.diary-input {
+  background: hsl(var(--diary-page));
+  border: 1.5px solid hsl(var(--border));
+  border-radius: calc(var(--radius) - 2px);
+  color: hsl(var(--diary-ink));
+  transition: var(--transition-base);
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+.diary-input:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.12);
+}
+
+.diary-textarea {
+  resize: vertical;
+  min-height: 160px;
+  line-height: 1.8;
+  font-family: 'Noto Serif SC', Georgia, serif;
+  letter-spacing: 0.02em;
+}
+
+/* 天气标签 */
+.weather-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1.5px solid hsl(var(--border));
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: var(--transition-base);
+  background: hsl(var(--card));
+  color: hsl(var(--muted-foreground));
+}
+
+.weather-tag:hover {
+  border-color: hsl(var(--primary));
+  color: hsl(var(--primary));
+  background: hsl(var(--accent));
+}
+
+.weather-tag--active {
+  background: hsl(var(--accent));
+  border-color: hsl(var(--primary));
+  color: hsl(var(--primary));
+  font-weight: 500;
+}
+
+/* Dialog 遮罩 */
+.dialog-overlay {
+  background: hsl(24 20% 10% / 0.45);
+  backdrop-filter: blur(4px);
+}
+
+/* 日记条目 */
+.diary-item {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  transition: var(--transition-base);
+  cursor: default;
+}
+
+.diary-item:hover {
+  border-color: hsl(var(--primary) / 0.35);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-1px);
+}
+
+/* 分页按钮 */
+.page-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(var(--radius) - 2px);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: var(--transition-base);
+  border: 1px solid transparent;
+}
+
+.page-btn:hover {
+  background: hsl(var(--accent));
+}
+
+.page-btn--active {
+  background: var(--gradient-primary);
+  color: hsl(var(--primary-foreground));
+  font-weight: 600;
+  box-shadow: 0 2px 6px hsl(var(--primary) / 0.3);
+}
+}
